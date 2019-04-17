@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title> Socket </title>
+    </head>
+    <body onload="connection()">
+        <p> <b>Check network tab for scoket communication.</b> </p>
+    </body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect();
+        function connection(){
+            socket.on("connect",function(data){
+                console.log("Connection "+data);
+            });
+        }
+    </script>
+</html>
