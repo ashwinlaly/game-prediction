@@ -7,7 +7,7 @@ var express = require('express'),
 var userRoute = require('./routes/usersRoute')();
 var gameRoute = require('./routes/gamesRoute')();
 var teamRoute = require('./routes/teamsRoute')();
-var db = require('./config');
+var db = require('./db');
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());

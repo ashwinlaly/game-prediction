@@ -4,7 +4,7 @@ var Scheme = mongoose.Schema;
 var gameSchema = new Scheme({
         hometeam: {
             isBatting : {type: Boolean },
-            id : {type: String, required:true },
+            id : {type: Scheme.Types.ObjectId, path: 'teams', required:true },
             hometeamscore: {type: Number, required: true}
         },
         awayteam: {
